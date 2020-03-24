@@ -30,9 +30,11 @@
                 techs,
                 location
             });
-         }
+            return res.json(dev);
+         } 
+         else       
+          return res.status(204);
          
-         return res.json(dev);
      }
      async index(req,res){
         const devs = await Dev.find();
